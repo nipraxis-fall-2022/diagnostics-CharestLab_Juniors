@@ -61,4 +61,7 @@ data/sub-08/func/sub-08_task-taskzero_run-01_bold.nii.gz, 0, 1, 2, 166, 167
 data/sub-09/func/sub-08_task-taskzero_run-01_bold.nii.gz, 3
 ```
 
-modified line for editing exercise
+
+modified line for editing exercise - Peter Brotherwood
+
+Line added by Emmanuel Lebeau for testing puposes
