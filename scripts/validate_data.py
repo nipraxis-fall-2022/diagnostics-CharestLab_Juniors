@@ -8,6 +8,7 @@ Run as:
 from pathlib import Path
 import hashlib
 
+
 def file_hash(filename):
     """ Get byte contents of file `filename`, return SHA1 hash
 
@@ -61,6 +62,7 @@ def validate_data(data_directory):
     print('All files verified')
 
     return
+
 
 
 
