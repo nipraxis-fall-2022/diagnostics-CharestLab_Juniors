@@ -57,10 +57,9 @@ def validate_data(data_directory):
         for ln in openfile.readlines():
             hashval, fname = ln.split()
             if hashval != file_hash(Path(data_dir / fname)):
-                raise(f'Hash values do not match for {fname.split("/")[-1]}')
+                raise Exception(f'Hash values do not match for {fname.split("/")[-1]}')
     
     print('All files verified')
-
     return
 
 
