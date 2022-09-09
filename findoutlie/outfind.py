@@ -9,8 +9,8 @@ __all__ = [
 from pathlib import Path
 import numpy as np
 import nibabel as nib
-from metrics import dvars
-from detectors import iqr_detector
+from .metrics import dvars
+from .detectors import iqr_detector
 
 def detect_outliers(fname):
     """ Return outlier indices for a specified image.
