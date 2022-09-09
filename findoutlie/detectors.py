@@ -10,6 +10,10 @@ other on normally distributed values etc.  The routines should check that their
 requirements are met and raise an error otherwise.
 """
 
+__all__ = [
+    'iqr_detector'
+]
+
 # Any imports you need
 import numpy as np
 
