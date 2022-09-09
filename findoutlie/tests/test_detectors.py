@@ -18,7 +18,8 @@ MY_DIR = Path(__file__).parent
 # directory to the Python path.
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
-# +++your code here+++
+CODE_DIR = (MY_DIR / '..').absolute()
+sys.path.append(str(CODE_DIR))
 
 import numpy as np
 
