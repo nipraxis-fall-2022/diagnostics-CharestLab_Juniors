@@ -12,10 +12,13 @@ or better, in IPython::
     %run findoutlie/tests/test_spm_funcs.py
 """
 
+__all__ = [
+    'spm_global',
+    'get_spm_globals'
+]
+
 import numpy as np
-
 import nibabel as nib
-
 
 def spm_global(vol):
     """ Calculate SPM global metric for array `vol`

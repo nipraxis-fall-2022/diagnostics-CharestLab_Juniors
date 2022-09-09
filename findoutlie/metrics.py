@@ -1,6 +1,10 @@
 """ Scan outlier metrics
 """
 
+__all__ = [
+    'dvars'
+]
+
 # Any imports you need
 import numpy as np
 
