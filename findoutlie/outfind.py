@@ -1,11 +1,34 @@
 """ Module with routines for finding outliers
 """
 
-from pathlib import Path
+__all__ = [
+    'detect_outliers',
+    'find_outliers'
+]
 
+from pathlib import Path
+import numpy as np
+import nibabel as nib
+from metrics import dvars
+from detectors import iqr_detector
 
 def detect_outliers(fname):
-    return [42]
+    """ Return outlier indices for a specified image.
+
+    Parameters
+    ----------
+    fname : str
+        Filename of image to check for outliers.
+
+    Returns
+    -------
+    outlier_idcs : np.array
+        Array of outlier indices for given image.
+    """
+    img = nib.load(fname)
+    metrics = dvars(img)
+    is_outlier = iqr_detector(metrics)
+    return np.nonzero(is_outlier)
 
 
 def find_outliers(data_directory):
